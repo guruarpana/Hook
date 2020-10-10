@@ -1,0 +1,42 @@
+# version 1
+
+for counter in 1..100
+  if (counter % 3 == 0) && (counter % 5 == 0)
+	puts 'AVAAMO'
+  elsif (counter % 3 == 0)
+  	puts 'AVA'
+  elsif (counter % 5 == 0)
+  	puts 'AMO'
+  else
+  	puts counter
+  end
+end
+
+# version 2
+
+counter = 1
+while counter <= 100
+  if (counter % 3 == 0) && (counter % 5 == 0)
+	puts 'AvAAMO'
+  elsif (counter % 3 == 0)
+  	puts 'AVA'
+  elsif (counter % 5 == 0)
+  	puts 'AMO'
+  else
+  	puts counter
+  end
+  counter += 1
+end
+
+# nerd version
+
+(1..100).each { |number|
+ op = []
+ if number%3==0
+  op.push("AVA")
+ end
+ if number%5==0
+  op.push("AMO")
+ end
+ puts op.size > 0 ? op.join("") : number.to_s
+}
